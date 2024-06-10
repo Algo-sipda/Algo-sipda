@@ -3,6 +3,10 @@
   <img src="https://github.com/Algo-sipda/.github/assets/112626357/e9b74137-c997-46d5-a631-21b17c215bdb" width="300px" height=auto />
 </p>
 
+## 📆 시작 날짜
+- 2024.06.10 ~ 진행중
+<br/><br/>
+
 ## 📝 스터디 규칙
 1. 공유할 내용이 있으면 부끄러워하지 말고 공유해주세요!
 2. 정해진 시간 안에 문제를 꼭 풀어서 공유해주세요.
