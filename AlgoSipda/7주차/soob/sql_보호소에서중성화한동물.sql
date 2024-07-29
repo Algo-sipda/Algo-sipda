@@ -1,0 +1,20 @@
+SELECT ANIMAL_ID, ANIMAL_TYPE, NAME
+FROM ANIMAL_INS
+WHERE ANIMAL_INS.ANIMAL_ID IN
+(
+    SELECT DISTINCT AI.ANIMAL_ID
+    FROM 
+        (
+            SELECT ANIMAL_ID
+            FROM ANIMAL_INS
+            WHERE SUBSTRING(SEX_UPON_INTAKE, 1, 6) = "Intact"
+        ) AS AI
+        JOIN
+        (
+            SELECT ANIMAL_ID
+            FROM ANIMAL_OUTS
+            WHERE SEX_UPON_OUTCOME = "Spayed Female" OR SEX_UPON_OUTCOME = "Neutered Male"
+        ) AS AO
+        ON AI.ANIMAL_ID = AO.ANIMAL_ID
+)
+ORDER BY ANIMAL_ID;
