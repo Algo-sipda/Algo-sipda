@@ -45,9 +45,7 @@ public class Main {
         for(int i=2; i<=N;i++) {
             int start = (int)Math.pow(2, i-1);
             for(int j=start; j<=M;j++) {
-                int powNum1 = (int)Math.pow(2, i-1);
-                int powNum2 = (int)Math.pow(2, i-2);
-                dp[i][j] = (dp[i][j-powNum1] + dp[i-1][j-powNum2])%MOD;
+                dp[i][j] = (dp[i][j-1] + dp[i-1][j/2])%MOD;
             }
         }
 
