@@ -1,0 +1,50 @@
+## Programmers 오프라인/온라인 판매 데이터 통합하기
+
+### 🛠️ 문제 🛠️
+
+```
+ONLINE_SALE 테이블과 OFFLINE_SALE 테이블에서 2022년 3월의 오프라인/온라인 상품 판매 데이터의 판매 날짜, 상품ID, 유저ID, 판매량을 출력하는 SQL문을 작성해주세요. OFFLINE_SALE 테이블의 판매 데이터의 USER_ID 값은 NULL 로 표시해주세요. 결과는 판매일을 기준으로 오름차순 정렬해주시고 판매일이 같다면 상품 ID를 기준으로 오름차순, 상품ID까지 같다면 유저 ID를 기준으로 오름차순 정렬해주세요.
+```
+
+[문제 바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/131537)
+
+<br/>
+
+### 💡 코드 💡
+
+```sql
+-- 2022년 3월의 상품
+-- offline_sale 테이블의 판매 데이터의 user_id 값은 null로 표시
+-- 판매일 기준 오름차순 정렬, 상품id 기준 오름차순, 유저id 기준 오름차순
+(   
+    -- ONLINE_SALE 테이블 -> 2022년 3월 데이터만 조회
+    SELECT DATE_FORMAT(SALES_DATE, "%Y-%m-%d") 'SALES_DATE',
+            PRODUCT_ID,
+            USER_ID,
+            SALES_AMOUNT
+    FROM ONLINE_SALE
+    WHERE YEAR(SALES_DATE) = 2022 AND MONTH(SALES_DATE) = 3
+    
+    -- 두 테이블 모든 데이터를 조회하기 위해 UNION 사용
+    -- UNION: 중복 데이터 제거
+    -- UNION ALL: 중복 데이터 제거 x
+    UNION
+    
+    -- OFFLINE_SALE 테이블 -> 2022년 3월 데이터만 조회
+    -- USER_ID가 없기 때문에 NULL로
+    SELECT DATE_FORMAT(SALES_DATE, "%Y-%m-%d") 'SALES_DATE',
+            PRODUCT_ID,
+            NULL AS USER_ID,
+            SALES_AMOUNT
+    FROM OFFLINE_SALE 
+    WHERE YEAR(SALES_DATE) = 2022 AND MONTH(SALES_DATE) = 3
+)
+ORDER BY SALES_DATE, PRODUCT_ID, USER_ID;
+
+```
+
+<br/>
+
+### 📙 개념 📙
+
+[없음]
