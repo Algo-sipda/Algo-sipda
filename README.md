@@ -56,11 +56,13 @@ ex) 1주차 > lcj > pro_문제이름
     <td style="text-align: center;" width="200" height="200"><img src="https://avatars.githubusercontent.com/u/78905126" alt="이지은" ></td>
     <td style="text-align: center;" width="200" height="200"><img src="https://avatars.githubusercontent.com/u/12527782" alt="옥수빈" ></td>
     <td style="text-align: center;" width="200" height="200"><img src="https://avatars.githubusercontent.com/u/28840207" alt="유소연" ></td>
+    <td style="text-align: center;" width="200" height="200"><img src="https://avatars.githubusercontent.com/u/68845258" alt="좌정현" ></td>
   </tr>
   <tr  align="center">
     <td style="text-align: center;" ><a href="https://github.com/chaejeong-lee">이채정</a></td>
     <td style="text-align: center;"><a href="https://github.com/jini11">이지은</a></td>
     <td style="text-align: center;"><a href="https://github.com/Endura0535">옥수빈</a></td>
     <td style="text-align: center;"><a href="https://github.com/loverduck">유소연</a></td>
+    <td style="text-align: center;"><a href="https://github.com/imhynni">좌정현</a></td>
   </tr>
 </table>
