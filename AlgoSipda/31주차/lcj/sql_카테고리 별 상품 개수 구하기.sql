@@ -1,0 +1,6 @@
+-- 상품 카테고리 코드(product_code 앞 2자리) 별 상품 개수를 출력
+-- 상품 카테고리 코드 기준 오름차순
+SELECT LEFT(PRODUCT_CODE, 2) AS CATEGORY, COUNT(LEFT(PRODUCT_CODE, 2)) AS PRODUCTS
+FROM PRODUCT
+GROUP BY CATEGORY
+ORDER BY CATEGORY;
